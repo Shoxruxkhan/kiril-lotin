@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+<header>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    
+    {% block content %}
+    <div class="p-5 text-center bg-light">
+        <form action=" {% url 'krill' %} " method="POST">
+            {% csrf_token %}
+        <div class="form-outline">
+            <textarea class="form-control" id="textAreaExample" rows="6" name="data"></textarea>
+            <label class="form-label" for="textAreaExample">Matnni kiriting</label>
+        </div><br>
+        <input type="submit" class="btn btn-primary" value="Lotinchaga o'tkazish">
+        <br><br>
+        <div class="form-outline">
+            <textarea class="form-control" id="textAreaExample" rows="6" disabled></textarea>
+            <label class="form-label" for="textAreaExample">{{ matn }}</label>
+        </div>
+        </form>
+        
+    </div>
+    {% endblock content %}
+        
+    <!-- Jumbotron -->
+    
+    <!-- Jumbotron -->
+  </header>
